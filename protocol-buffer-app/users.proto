@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// 数字はプロトコルバッファーが内部で使うID。
+// 一意である必要がある。連番で書くだけ。
+message User {
+  int32 id = 1;
+  string name = 2;
+  float salary = 3;
+}
+
+// Users = {
+//   users User[]
+// } 
+
+message Users {
+  repeated User users = 1;
+}
